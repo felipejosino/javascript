@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        body{
+            background-color: rgb(126, 164, 179);
+        }
+        div#eventClick{
+        font: normal 14px Arial;
+        background-color: rgb(186, 46, 67);
+        color: rgb(216, 212, 212);
+        height: 150px;
+        width: 150px;
+        line-height: 150px;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- troca tudo isso por addEventListener JS -->
+    <!-- <div id="eventClick" onclick="clicar()" onmouseenter="entrou()" onmouseout="sair()"> -->
+    <div id="eventClick">
+        Passe o mouse!
+    </div>
+
+    <script>
+         var areaClick = window.document.querySelector('div#eventClick')
+
+         areaClick.addEventListener('click', clicar)
+         areaClick.addEventListener('mouseenter', entrou)
+         areaClick.addEventListener('mouseout', sair)
+
+        function clicar(){
+            areaClick.innerText = 'Clicou!'
+            areaClick.style.background = 'gray'
+        }
+
+        function entrou(){
+            areaClick.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            areaClick.innerText = 'Saiu!'
+            areaClick.style.background = 'rgb(186, 46, 67)'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercicios </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Super Contador</h1>
+    </header>
+    
+    <section>
+        <div id="dados">
+            <p>
+               <strong>Informe os numeros:</strong> 
+            </p>
+            <p> 
+                <strong> Início :</strong> <input type="number" name="txtI" id="txtI">
+            </p>
+            <p>
+                <strong>Fim :</strong> <input type="number" name="txtF" id="txtF">
+            </p>
+            <p>
+                <strong>Passo :</strong> <input type="number" name="txtP" id="txtP">
+            </p>
+            <p>
+                <input type="button" value="Contar" id="btnContar" onclick="contar()">
+            </p>
+
+        </div>
+
+        <div id="resultado">
+            <strong> Preparando contagem... </strong> 
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

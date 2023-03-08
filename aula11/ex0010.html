@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color: rgba(225, 168, 93, 0.489);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>    
+
+    <Label>Velocidade do carro: </Label>
+    <input type="number" name="inpVel" id="inpVel">
+    <input type="button" value="Verificar" id="btnVerificar" onclick="calcular()">
+    
+    <div id="result"></div>
+
+    <script>
+        function calcular(){
+            var inpVel = window.document.querySelector('input#inpVel')
+            var result = window.document.querySelector('div#result')
+            
+            var vel = Number(inpVel.value)
+
+            if(vel > 60){
+                result.innerHTML += `Voce excedeu a velocidade permitida!<strong>MULTADO</strong>`
+                result.style.color = 'red'
+            }else{
+                result.innerHTML = `<p>Sua Velocidade atual é de <strong>${vel}Km/h</strong></p>`
+                result.style.color = 'green'
+            }
+
+            result.innerHTML += `<p>Dirija sempre com segurança!</p>`
+        }
+    </script>
+</body>
+</html>
