@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+    <style>
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            height: 50px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 02</h1>
+
+    <input type="button" value="Inicie o desafio" id="btn">
+
+
+    <script>
+        var btn = window.document.querySelector('input#btn')
+        
+        btn.addEventListener('click', function () {
+            let nome = window.prompt(`Qual é o seu nome?`)
+            let idade  = window.prompt(`Quantos anos voce tem ? [Apenas numeros]`)
+
+            window.alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade`)
+        })
+
+    </script>
+</body>
+</html>
