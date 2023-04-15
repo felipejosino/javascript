@@ -30,19 +30,29 @@
             const name = window.document.querySelector('input#txtLocal')
             const result = window.document.querySelector('div#result')
 
-            // var pais = Number(name.value)
-            
-            // typeof(name === "number")
+            let pais = name.value
+            let re = new RegExp('[^a-zA-Z]','i')
 
-            if(name.value.length == 0 || !isNaN(parseFloat(name.value)) ){
+            if(name.value.length == 0){
                 result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
-            }else{
-                if(name.value.toUpperCase() == 'BRASIL'){
-                    result.innerHTML = `Voce é Brasileiro`
-                }else{
-                    result.innerHTML = `Voce é Estrangeiro`
-                }
+                return
             }
+
+            if(re.test(pais)){
+                result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
+                return
+            }
+
+            if(name.value.toUpperCase() != 'BRASIL'){
+                result.innerHTML = `Voce é Estrangeiro`
+                return
+            }
+
+            result.innerHTML = `Voce é Brasileiro`
+             return   
+                   
+                    
+    
 
         }     
 
