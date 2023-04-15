@@ -21,8 +21,12 @@
     </style>
 </head>
 <body>
-    <!-- troca tudo isso por addEventListener JS -->
-    <!-- <div id="eventClick" onclick="clicar()" onmouseenter="entrou()" onmouseout="sair()"> -->
+    <!-- troca 
+         <div id="eventClick" onclick="clicar()" onmouseenter="entrou()" onmouseout="sair()">
+         
+        por
+         addEventListener JS
+    -->
     <div id="eventClick">
         Passe o mouse!
     </div>
@@ -34,19 +38,20 @@
          areaClick.addEventListener('mouseenter', entrou)
          areaClick.addEventListener('mouseout', sair)
 
-        function clicar(){
-            areaClick.innerText = 'Clicou!'
-            areaClick.style.background = 'gray'
+         function entrou(){
+             areaClick.innerText = 'Entrou!'
+         }
+                  
+         function clicar(){
+             areaClick.innerText = 'Clicou!'
+             areaClick.style.background = 'gray'
         }
-
-        function entrou(){
-            areaClick.innerText = 'Entrou!'
-        }
-
+        
         function sair(){
             areaClick.innerText = 'Saiu!'
             areaClick.style.background = 'rgb(186, 46, 67)'
         }
+            
     </script>
 </body>
 </html>

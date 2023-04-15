@@ -9,7 +9,7 @@ function fatorial(n = 0){ // esta prevendo caso usuario nao digite nada  recebe 
         return n * fatorial(n-1)
     }
 }
-console.log(fatorial(10))
+console.log(fatorial(5))
 
 /*
 Logica: 
@@ -17,7 +17,7 @@ Logica:
 5! = 5 X 4!
 
 termo geral 
-n! = n x (n-1)!
+n! = n * (n-1)!
 1! = 1
 0! = 1
 

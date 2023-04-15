@@ -7,31 +7,36 @@
     <title>Detran</title>
     <style>
         body{
-            background-color: rgba(225, 168, 93, 0.489);
+            background-color: gray;
         }
     </style>
 </head>
 <body>
     <h1>Sistema de Multas</h1>    
 
-    <Label>Velocidade do carro: </Label>
-    <input type="number" name="inpVel" id="inpVel">
-    <input type="button" value="Verificar" id="btnVerificar" onclick="calcular()">
+    <Label for="inpVel">Velocidade do carro: </Label>
+    <input type="number" name="vel" id="inpVel"> Km/h
+    <input type="button" value="Verificar" id="btnVerificar">
     
     <div id="result"></div>
 
     <script>
+        var btn = window.document.querySelector('input#btnVerificar')
+
+        btn.addEventListener('click', calcular)
+
         function calcular(){
             var inpVel = window.document.querySelector('input#inpVel')
             var result = window.document.querySelector('div#result')
             
             var vel = Number(inpVel.value)
+            
+            result.innerHTML = `<p>Sua Velocidade atual é de <strong>${vel}Km/h</strong></p>`
 
             if(vel > 60){
                 result.innerHTML += `Voce excedeu a velocidade permitida!<strong>MULTADO</strong>`
-                result.style.color = 'red'
+                result.style.color = 'rgb(197, 22, 22)'
             }else{
-                result.innerHTML = `<p>Sua Velocidade atual é de <strong>${vel}Km/h</strong></p>`
                 result.style.color = 'green'
             }
 

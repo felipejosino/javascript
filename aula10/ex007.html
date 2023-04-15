@@ -9,10 +9,10 @@
     <style>
         body{
             background: rgb(46, 104, 128);
-            font: normal 12pt Tahoma;
+            font: normal 1em Tahoma;
         }
         input{
-            font: normal 10pt Arial;
+            font: normal .8em Arial;
             width: 70px;
             text-align: center;
         }
@@ -34,11 +34,15 @@
     <h1> Somando Valores</h1>
     <input type="Number" name="txtn1" id="txtn1"> +
     <input type="Number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="soma()" id="btn">
+    <input type="button" value="Somar" id="btn">
 
     <div id="result"> Resultado</div>
 
     <script>
+        var btn = window.document.querySelector('input#btn')
+
+        btn.addEventListener('click', soma)
+
         function soma(){
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document. querySelector('input#txtn2')

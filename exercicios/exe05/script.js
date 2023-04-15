@@ -38,7 +38,7 @@ btnAdd.addEventListener('click', function(){
         }
 
         num.value = `` // value // atributo vai receber vazio para limpar
-        num.focus()    // adicionando foco na iput
+        num.focus()    // adicionando foco na input
 })
 
 btnFin.addEventListener('click', function(){

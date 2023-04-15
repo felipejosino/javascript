@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detran</title>
+    <title>Localidade</title>
     <style>
         body{
             background-color: skyblue;
@@ -14,37 +14,38 @@
 <body>
     <h1>Localidade</h1>    
 
-    <Label>Voce mora onde?</Label>
-    <input type="text" name="txtLocal" id="txtLocal">
+    <Label for="txtLocal">Qual seu país?</Label>
+    <input type="text" name="txtLocal" id="txtLocal" required>
     <input type="button" value="Buscar" id="btnSend">
     
     <div id="result"></div>
 
     <script>
-        const btn = window.document.querySelector('input#btnSend')
-        
-        btn.addEventListener("click", function(e){
-            e.preventDefault()
 
+        var btn = window.document.querySelector('input#btnSend')
+
+        btn.addEventListener('click', click)
+
+        function click(){   
             const name = window.document.querySelector('input#txtLocal')
             const result = window.document.querySelector('div#result')
 
-            var value = name.value
+            // var pais = Number(name.value)
+            
+            // typeof(name === "number")
 
-            if(value == 'Brasil'){
-                result.innerHTML = `Voce é Brasileiro`
+            if(name.value.length == 0 || !isNaN(parseFloat(name.value)) ){
+                result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
             }else{
-                result.innerHTML = `Voce é Estrangeiro`
+                if(name.value.toUpperCase() == 'BRASIL'){
+                    result.innerHTML = `Voce é Brasileiro`
+                }else{
+                    result.innerHTML = `Voce é Estrangeiro`
+                }
             }
-        })
-      
-            
 
-          
+        }     
 
-            
-
-          
     </script>
 </body>
 </html>

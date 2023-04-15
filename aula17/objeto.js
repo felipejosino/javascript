@@ -1,4 +1,4 @@
-let amigo = {
+let pessoa = {
     nome: 'Felipe',
     sexo: 'M',
     peso: 65,
@@ -6,5 +6,7 @@ let amigo = {
         this.peso += p
     }
 }
-amigo.engondar(5) // chama funcition dentro do objeto passando parametro para aumentar
-console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
+pessoa.engondar(5) // chama function dentro do objeto passando parametro para aumentar
+                   //substitua valor 5, para um que deseja
+                   
+console.log(`${pessoa.nome} pesa ${pessoa.peso}Kg`)

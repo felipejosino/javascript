@@ -22,7 +22,7 @@ function contar(){
         }
 
         if(i <= f ){
-            // Contagem Prpgressiva
+            // Contagem Propgressiva
             while(i <= f){
                 resultado.innerHTML += ` ${i} \u{1F449}`
                 i += p

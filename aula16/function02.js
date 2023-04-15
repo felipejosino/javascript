@@ -2,4 +2,4 @@ function soma(n1 = 0, n2 = 0){ // n1 = 0 parametros pre definidos caso nao passe
     return n1 + n2
 } 
 
-console.log(soma(2))
+console.log(soma(3,1))
