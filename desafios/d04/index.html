@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 03</title>
+    <title>Desafio 04</title>
     <style>
         input{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 1.2em;
             height: 50px;
-            width: 250px;
+            width: 200px;
         }
     </style>
 </head>
 <body>
-    <h1>Desafio 03</h1>
+    <h1>Desafio 04</h1>
 
-    <input type="button" value="Antecessor e Sucessor" id="btn">
+    <input type="button" value="Comprar produto" id="btn">
 
 
     <script>
@@ -25,7 +25,10 @@
         
         btn.addEventListener('click', function () {
 
-            let num = Number(window.prompt(`Digite numero inteiro qualquer`))
+            // let num = Number(window.prompt(`Digite numero inteiro qualquer`))
+
+            let prod = window.prompt(`Que produto voce está comprando ?`)
+            let valProd = window.prompt(`Quanto custa ${prod} que voce está comprando ?`)
             
             let antecessor = num - 1
             let sucessor = num + 1
