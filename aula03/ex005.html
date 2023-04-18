@@ -28,43 +28,43 @@
 
     <div id="qSele">Div 03</div>
     
-    <script>
-        var corpo = window.document.body //altera cor do body
-        var p1 = window.document.getElementsByTagName('p')[1] // seleciona o que desejo e [n] indica qual elemneto desejo manipular 
+<script>
+var corpo = window.document.body //altera cor do body
+var p1 = window.document.getElementsByTagName('p')[1] // seleciona o que desejo e [n] indica qual elemneto desejo manipular 
 
-        corpo.style.background = 'rgb(30, 50, 80)' // trocando cor do body
-       // p1.style.color = "grey" // trocando a cor do paragrafo selecionado [n]
-        
-        document.write(`<br> Você selecionaou: ${p1.innerText}`) //Observe que ele trouxe simplismente o textoo, porém não tras todos elementos ex: strong
-        document.write(`<br> Você selecionou: ${p1.innerHTML}`) // Aqui ja pegou todos os elementos e tags ex: strong
-        // observe abaixo
-         
-            // window.alert(p1.innerText)
-            // window.alert(p1.innerHTML)
-        
+corpo.style.background = 'rgb(30, 50, 80)' // trocando cor do body
+// p1.style.color = "grey" // trocando a cor do paragrafo selecionado [n]
 
-        //Seleção por ID
-            var d = window.document.getElementById('d')
-            d.style.background = "rgb(123, 93, 150)"
-            d.innerText = 'Estou aguardando...' //modificando texto da Div
-            //ou cód só
-            window.document.getElementById('d').innerText = 'olá! sou Div 01, getElementById()'
+document.write(`<br> Você selecionaou: ${p1.innerText}`) //Observe que ele trouxe simplismente o textoo, porém não tras todos elementos ex: strong
+document.write(`<br> Você selecionou: ${p1.innerHTML}`) // Aqui ja pegou todos os elementos e tags ex: strong
+// observe abaixo
+    
+    // window.alert(p1.innerText)
+    // window.alert(p1.innerHTML)
 
-        //Seleçãp por Name
-            var d1 = window.document.getElementsByName('d1')[0]
-            d1.innerText = 'Sou a Div 01, getElementsByName()[0]'
-            d1.style.background = "rgb(153, 53, 160)"
-        //Seleçãp por Class
-            var d2 = window.document.getElementsByClassName('d2')[0]
-            d2.innerText = 'Sou a Div 02, getElementsByClassName()[0]'
-            d2.style.color = "rgb(723, 40, 200)"
 
-        // Seleção por querySelector
-        var qSele = window.document.querySelector('div#qSele')
-        qSele.innerText =  'Sou a Div 03, querySelector'
-        qSele.style.background = "rgb(723, 40, 200)"
+//Seleção por ID
+var d = window.document.getElementById('d')
+d.style.background = "rgb(123, 93, 150)"
+d.innerText = 'Estou aguardando...' //modificando texto da Div
+//ou cód só
+window.document.getElementById('d').innerText = 'olá! sou Div 01, getElementById()'
 
-    </script>
+//Seleçãp por Name
+var d1 = window.document.getElementsByName('d1')[0]
+d1.innerText = 'Sou a Div 01, getElementsByName()[0]'
+d1.style.background = "rgb(153, 53, 160)"
+//Seleçãp por Class
+var d2 = window.document.getElementsByClassName('d2')[0]
+d2.innerText = 'Sou a Div 02, getElementsByClassName()[0]'
+d2.style.color = "rgb(723, 40, 200)"
+
+// Seleção por querySelector
+var qSele = window.document.querySelector('div#qSele')
+qSele.innerText =  'Sou a Div 03, querySelector'
+qSele.style.background = "rgb(723, 40, 200)"
+
+</script>
     
 </body>
 </html>

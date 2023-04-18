@@ -31,27 +31,27 @@
         Passe o mouse!
     </div>
 
-    <script>
-         var areaClick = window.document.querySelector('div#eventClick')
+<script>
+var areaClick = window.document.querySelector('div#eventClick')
 
-         areaClick.addEventListener('click', clicar)
-         areaClick.addEventListener('mouseenter', entrou)
-         areaClick.addEventListener('mouseout', sair)
+areaClick.addEventListener('click', clicar)
+areaClick.addEventListener('mouseenter', entrou)
+areaClick.addEventListener('mouseout', sair)
 
-         function entrou(){
-             areaClick.innerText = 'Entrou!'
-         }
-                  
-         function clicar(){
-             areaClick.innerText = 'Clicou!'
-             areaClick.style.background = 'gray'
-        }
-        
-        function sair(){
-            areaClick.innerText = 'Saiu!'
-            areaClick.style.background = 'rgb(186, 46, 67)'
-        }
-            
-    </script>
+function entrou(){
+areaClick.innerText = 'Entrou!'
+}
+
+function clicar(){
+areaClick.innerText = 'Clicou!'
+areaClick.style.background = 'gray'
+}
+
+function sair(){
+areaClick.innerText = 'Saiu!'
+areaClick.style.background = 'rgb(186, 46, 67)'
+}
+
+</script>
 </body>
 </html>

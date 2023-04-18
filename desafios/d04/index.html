@@ -20,23 +20,28 @@
     <input type="button" value="Comprar produto" id="btn">
 
 
-    <script>
-        var btn = window.document.querySelector('input#btn')
-        
-        btn.addEventListener('click', function () {
+<script>
+var btn = window.document.querySelector('input#btn')
 
-            // let num = Number(window.prompt(`Digite numero inteiro qualquer`))
+btn.addEventListener('click', function () {
 
-            let prod = window.prompt(`Que produto voce está comprando ?`)
-            let valProd = window.prompt(`Quanto custa ${prod} que voce está comprando ?`)
-            
-            let antecessor = num - 1
-            let sucessor = num + 1
+let prod = window.prompt(`Que produto voce está comprando ?`)
+let valProd = Number(window.prompt(`Quanto custa ${prod} que voce está comprando ?`))
+let valPago = Number(window.prompt(`Qual foi o valor que voce deu para pagar ${prod} ?`))
 
-            window.alert(`[ Antecessor :  ${antecessor} ]  , (  Numero escolhido [ ${num} ]   ) ,  [ Sucessor   :   ${sucessor} ]`)
+let troco = valPago - valProd
 
-        })
+window.alert(
+`Voce comprou ${prod} que custa ${ valProd.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }.
 
-    </script>
+Deu ${valPago.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco.
+
+Volte Sempre!`
+
+)
+
+})
+
+</script>
 </body>
 </html>

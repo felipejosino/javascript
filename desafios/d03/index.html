@@ -20,19 +20,19 @@
     <input type="button" value="Antecessor e Sucessor" id="btn">
 
 
-    <script>
-        var btn = window.document.querySelector('input#btn')
-        
-        btn.addEventListener('click', function () {
+<script>
+var btn = window.document.querySelector('input#btn')
 
-            let num = Number(window.prompt(`Digite numero inteiro qualquer`))
-            
-            let antecessor = num - 1
-            let sucessor = num + 1
+btn.addEventListener('click', function () {
 
-            window.alert(`[ Antecessor :  ${antecessor} ]  , (  Numero escolhido [ ${num} ]   ) ,  [ Sucessor   :   ${sucessor} ]`)
+let num = Number(window.prompt(`Digite numero inteiro qualquer`))
 
-        })
+let antecessor = num - 1
+let sucessor = num + 1
+
+window.alert(`[ Antecessor :  ${antecessor} ]  , (  Numero escolhido [ ${num} ]   ) ,  [ Sucessor   :   ${sucessor} ]`)
+
+})
 
     </script>
 </body>

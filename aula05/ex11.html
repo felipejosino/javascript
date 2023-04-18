@@ -20,42 +20,38 @@
     
     <div id="result"></div>
 
-    <script>
+<script>
 
-        var btn = window.document.querySelector('input#btnSend')
+var btn = window.document.querySelector('input#btnSend')
 
-        btn.addEventListener('click', click)
+btn.addEventListener('click', click)
 
-        function click(){   
-            const name = window.document.querySelector('input#txtLocal')
-            const result = window.document.querySelector('div#result')
+function click(){   
+const name = window.document.querySelector('input#txtLocal')
+const result = window.document.querySelector('div#result')
 
-            let pais = name.value
-            let re = new RegExp('[^a-zA-Z]','i')
+let pais = name.value
+let re = new RegExp('[^a-zA-Z]','i')
 
-            if(name.value.length == 0){
-                result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
-                return
-            }
+if(name.value.length == 0){
+result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
+return
+}
 
-            if(re.test(pais)){
-                result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
-                return
-            }
+if(re.test(pais)){
+result.innerHTML = '[ERRO] Verifique os dados e tente novamente!'
+return
+}
 
-            if(name.value.toUpperCase() != 'BRASIL'){
-                result.innerHTML = `Voce é Estrangeiro`
-                return
-            }
+if(name.value.toUpperCase() != 'BRASIL'){
+result.innerHTML = `Voce é Estrangeiro`
+return
+}
 
-            result.innerHTML = `Voce é Brasileiro`
-             return   
-                   
-                    
-    
+result.innerHTML = `Voce é Brasileiro`
+return   
+}     
 
-        }     
-
-    </script>
+</script>
 </body>
 </html>

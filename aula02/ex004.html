@@ -14,19 +14,19 @@
     </style>
 </head>
 <body>
-    <script>
+    
+<script>
 
-        //Formatar letras
-        var nome = window.prompt('Qual é seu nome ?')
-        var salario = Number(window.prompt('Informe seu salário.'))
+//Formatar letras
+var nome = window.prompt('Qual é seu nome ?')
+var salario = Number(window.prompt('Informe seu salário.'))
 
-        document.write(`Olá, <strong>${nome}</strong>! Seu nome possui ${nome.length} letras<br><br>`) //length conta caracteres
+document.write(`Olá, <strong>${nome}</strong>! Seu nome possui ${nome.length} letras<br><br>`) //length conta caracteres
 
-        document.write(`Seu nome em Maiúsculas é :  <strong>${nome.toUpperCase()}</strong><br>`) // toUpperCase nome em maiúsculo
-        document.write(`Seu nome em Minúsculas é : <strong>${nome.toLowerCase()}</strong><br>`) //toLowerCase nome em minúsculo
-        document.write(`Salário: <strong>${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong><br>`)
+document.write(`Seu nome em Maiúsculas é :  <strong>${nome.toUpperCase()}</strong><br>`) // toUpperCase nome em maiúsculo
+document.write(`Seu nome em Minúsculas é : <strong>${nome.toLowerCase()}</strong><br>`) //toLowerCase nome em minúsculo
+document.write(`Salário: <strong>${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong><br>`)
 
-
-    </script>
+</script>
 </body>
 </html>
