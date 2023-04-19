@@ -31,8 +31,7 @@ var print = window.document.querySelector('div#print')
 
 btn.addEventListener('click', function() {
 
-// let distancia = Number(window.prompt(`Digite uma distanciatância em metros (m) ex: 875.29`))
-let metro = window.prompt(`Digite uma metrostância em metros (m) ex: 875.29`)
+let metro = window.prompt(`Digite uma distância em metros (m) ex: 875.29`)
 
 let km = parseFloat(metro /1000).toFixed(3).replace('.', ',')
 let hm = parseFloat(metro /100).toFixed(3).replace('.', ',')
@@ -43,14 +42,14 @@ let cm = parseFloat(metro *100).toLocaleString()
 let mm = parseFloat(metro *1000).toLocaleString()
 
 print.innerHTML = 
-    `<h2>A metro de ${metro.replace('.', ',')} <small>metros</small>, corresponde a...</h2>
+    `<h2>A distância de ${metro.replace('.', ',')} <small>metros</small>, corresponde a...</h2>
     <br>
-    ${km} quilômetros (Km)<br><br>
-    ${hm} hectômetros (hm)<br><br>
-    ${dam} decâmetros (dam)<br><br>
-    ${dm} decímetros (dm)<br><br>
-    ${cm} centímetros (cm)<br><br>
-    ${mm} milímetros (mm)<br><br>
+    <p>${km} quilômetros (Km)</p>
+    <p>${hm} hectômetros (hm)</p>
+    <p>${dam} decâmetros (dam)</p>
+    <p>${dm} decímetros (dm)</p>
+    <p>${cm} centímetros (cm)</p>
+    <p>${mm} milímetros (mm)</p>
 
     `
 })
