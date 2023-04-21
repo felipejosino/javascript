@@ -19,7 +19,7 @@
 
     <input type="button" value="Calcular Bhaskara" id="btn">
     <br>
-    <p id="p">...</p>
+    <p id="p"></p>
     <br>
     <div id="print">
 
@@ -27,7 +27,31 @@
 
 
 <script>
-    
+var btn = window.document.querySelector(`input#btn`)
+var print = window.document.querySelector(`div#print`)
+var explicação = window.document.getElementById(`p`)
+
+explicação.innerHTML = `Considerando uma equação no formato <strong>a</strong>x<sup>2</sup>+ <strong>b</strong>x + <strong>c</strong> = 0, calcule valor de &Delta;`
+
+btn.addEventListener('click', function(){
+    let a = parseInt(window.prompt(`Qual é o valo de a`))
+    let b = window.prompt(`Qual é o valo de b`)
+    let c = window.prompt(`Qual é o valo de c`)
+
+    explicação.innerHTML = ``
+
+    print.innerHTML = 
+    `   
+    <p>A equação atual é <strong>${a}</strong>x<sup>2</sup>+ <strong>${b}</strong>x + <strong>${c}</strong> = 0</p>
+    <p>O cálculo realizado será <strong>&Delta; = ${b}<sup>2</sup> -4 . ${a} . ${c} </strong></p>
+    <p>O valor calculado foi <strong>&Delta; = <mark>12</mark></strong></p>
+    `
+
+    console.log(`a = ${a}. b = ${b}, c = ${c}`)
+
+})
+
+
 
 </script>
 </body>
