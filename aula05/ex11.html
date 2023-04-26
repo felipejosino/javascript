@@ -27,8 +27,8 @@ var btn = window.document.querySelector('input#btnSend')
 btn.addEventListener('click', click)
 
 function click(){   
-const name = window.document.querySelector('input#txtLocal')
-const result = window.document.querySelector('div#result')
+let name = window.document.querySelector('input#txtLocal')
+let result = window.document.querySelector('div#result')
 
 let pais = name.value
 let re = new RegExp('[^a-zA-Z]','i')
