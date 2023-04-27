@@ -10,18 +10,16 @@ function verificarNum(){
     let sucessor = num + 1
 
     if(regexNum.test(num)){
-        print.innerHTML = `[ERRO] Preencha o campo corretamente!`
+        print.innerHTML = `<p>[ERRO] Preencha o campo corretamente!</p>`
         return
     }
 
     print.innerHTML = `
-
-    [ Antecessor : ${antecessor} ]; <br><br>
-    
-    (  Numero escolhido [ ${num} ]   ); <br><br>
-    
-    [ Sucessor   :   ${sucessor} ]
-
+        <p>[ Antecessor : ${antecessor} ]; </p><br>
+        
+        <p>(  Numero escolhido [ ${num} ]   ); </p><br>
+        
+        <p>[ Sucessor   :   ${sucessor} ]</p>
     `
 }
 
