@@ -7,14 +7,14 @@ function converterMedida(){
 let input = window.prompt(`Digite uma distância em metros (m)     ex: 875.29`)
 
 if( input == null){
-    print.innerHTML = `Voce cancelou desafio!`
+    print.innerHTML = `<p>Voce cancelou desafio!</p>`
     return
 }
 
 let metros = input.replace(',', '.')
 
 if(input == "" || metros == 0){
-    print.innerHTML = `Informe um valor para conversão!`
+    print.innerHTML = `<p>Informe um valor para conversão!</p>`
     return
 }
 
@@ -25,7 +25,7 @@ function verificarNum(num){
 }
 
 if( verificarNum(metros) ){
-        print.innerHTML = `[ERRO] Preencha valor do campo corretamente!`
+        print.innerHTML = `<p>[ERRO] Preencha valor do campo corretamente!</p>`
 
         console.log(verificarNum(metros))
 
