@@ -20,7 +20,7 @@ function verificarCompra(){
 
     function calTroco(valorPro, valorPago){
      
-            return valorPago - valProd
+            return valorPago - valorPro
 
     }
 
