@@ -5,44 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 07</title>
-    <style>
-        input{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.2em;
-            height: 50px;
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Desafio 07</h1>
 
-    <input type="button" value="Converter ( R$ => US$ ) " id="btn">
-    <br>
-    <br>
-    <div id="print">
-
-    </div>
-
-
-<script>
-var btn = window.document.querySelector(`input#btn`)
-var print = window.document.querySelector(`div#print`)
-
-btn.addEventListener('click', function(){
-    let valorDolar = parseFloat(window.prompt(`Antes de mais nada. Quanto está a cotação do dólar agora ?`))
-    let valorReais = parseFloat(window.prompt(`Quantos R$ você tem na carteira ?`))
-
-    //Cotação 19/04/2023  5,05 Real = 1 Dólar
+    <header>
+        <h1>Desafio 07</h1>
+    </header>
     
-    let valorConvertido = (valorReais / valorDolar)
+    <main>
+        <section>
+            <p>Converta valor do Real para Dólar </p>
+            <div id="botoes">
+                <input type="button" value="Converter" id="btn">
+            </div>
 
-    print.innerHTML = 
-    `   <p>Cotação do dólar : ${valorDolar.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</p>
-        <h2>Seu valor ${valorReais.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} convertido em dólar é ${valorConvertido.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</h2>
-        `
-        console.log(`${valorReais} , ${valorDolar}, ${valorConvertido}`)    
-})
-</script>
+            <div id="print">
+                <!-- Div 02 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
