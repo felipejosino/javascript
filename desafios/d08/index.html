@@ -5,49 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 08</title>
-    <style>
-        input{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.2em;
-            height: 50px;
-            width: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Desafio 08</h1>
 
-    <input type="button" value="Desconto de 10%" id="btn">
-    <br>
-    <br>
-    <div id="print">
-
-    </div>
-
-
-<script>
-var btn = window.document.querySelector('input#btn')
-var print = window.document.querySelector('div#print')
-
-btn.addEventListener('click', function(){
-
-    let nomeProd = window.prompt(`Qual é o produto que você está comprando?`)
-    let valorProd = parseFloat(window.prompt(`Qual é o preço de ${nomeProd}?  Ex:. 795.98`))
+    <header>
+        <h1>Desafio 08</h1>
+    </header>
     
-    let valorDesconto = (10 / 100) * valorProd
-    let valorFinal = valorProd - valorDesconto
-    
-    print.innerHTML = 
-    `
-        <h2>Calculando desconto de 10% para ${nomeProd}</h2>
-        <p>O Preço original era ${valorProd.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>
-        <p>Você acaba de ganhar ${valorDesconto.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})} de desconto (-10%).</p>
-        <p>No fim, você vai pagar ${valorFinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no produto ${nomeProd}</p>
+    <main>
+        <section>
+            <p>Calcular Desconto </p>
+            <div id="botoes">
+                <input type="button" value="Desconto de 10%" id="btn">
+            </div>
 
-    `
+            <div id="print">
+                <!-- Div 02 -->
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
 
-})
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

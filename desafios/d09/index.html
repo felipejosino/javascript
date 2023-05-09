@@ -5,52 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 09</title>
-    <style>
-        input{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.2em;
-            height: 50px;
-            width: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Desafio 09</h1>
 
-    <input type="button" value="Reajustar Salário" id="btn">
-    <br>
-    <br>
-    <div id="print">
-
-    </div>
-
-
-<script>
-
-var btn = window.document.querySelector('input#btn')
-var print = window.document.querySelector('div#print')
-
-btn.addEventListener('click', function(){
+    <header>
+        <h1>Desafio 09</h1>
+    </header>
     
-    let nomeFun = window.prompt(`Qual é o nome do Funcionário?  EX:. Pedro Paulo`)
-    let salario = parseFloat(window.prompt(`Qual é o salário de ${nomeFun} ?  E:x. 2850.25`))
-    let reajuste = parseFloat(window.prompt(`O salário de ${nomeFun} vai ser reajustado em qual porcentagem?  EX:. 18`))
+    <main>
+        <section>
+            <p>Insira os dados para reajuste salarial </p>
+            <div id="botoes">
+                <input type="button" value="Calcular" id="btn">
+            </div>
 
-    let valorReajustado = (reajuste / 100) * salario
+            <div id="print">
+                <!-- Div 02 -->
+            </div>
+        </section>
+    </main>
 
-    let salarioFinal = salario + valorReajustado
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
 
-    print.innerHTML = 
-    `
-        <h2>${nomeFun} recebeu um aumento salarial !</h2>
-
-        <p>O salário atual era ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>
-        <p>Com um aumento de ${reajuste}%, o salário vai aumentar ${valorReajustado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no próximo mês.</p>
-        <p>E a partir daí, ${nomeFun} vai passar a ganhar ${salarioFinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
-    `
-
-})
-
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

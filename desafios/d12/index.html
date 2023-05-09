@@ -5,85 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 12</title>
-    <style>
-        input{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.2em;
-            height: 50px;
-            width: 200px;
-        }
-        mark#verde{
-            background-color: #A6EB9A;
-            color: #377D21;
-            font-weight: bold;
-        }
-        mark#vermelho{
-            background-color: #E4908D;
-            color: #80190D;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Desafio 12</h1>
 
-    <input type="button" value="Verificar Preço" id="btn">
-    <br>
-    <br>
-    <div id="print">
-
-    </div>
-
-
-<script>
-var btn = window.document.querySelector(`input#btn`)
-var print = window.document.querySelector(`div#print`)
-
-function verificarPreco(){
-    let precoAntigo = parseFloat(window.prompt(`Qual era o preço do produto?`))
-    let precoAtual = parseFloat(window.prompt(`Qual é o preço atual do produto ?`))
-
-    if(precoAntigo < precoAtual){
-
-        let diferenca = precoAtual - precoAntigo
-        let variacaoSubiu = (precoAtual - precoAntigo) / precoAntigo * 100
-        
-        print.innerHTML = ` 
-        
-        <p>O produto custava ${precoAntigo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e agora custa ${precoAtual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>
-
-        <p>Hoje o produto está mais caro.</p>
-
-        <p>O preço subiu ${diferenca.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.</p>
-
-        <p>Uma variação de ${variacaoSubiu.toFixed(2)}% para cima.</p>
-        
-        `
-        return
-    }
+    <header>
+        <h1>Desafio 12</h1>
+    </header>
     
-    let diferenca =  precoAntigo - precoAtual
-    let variacaoCaiu = ( precoAntigo - precoAtual) / precoAntigo * 100
+    <main>
+        <section>
+            <p>Verifique diferença de preço</p>
+            <div id="botoes">
+                <input type="button" value="Analisar" id="btn">
+            </div>
 
-    print.innerHTML = 
-        `
-        <p>O produto custava ${precoAntigo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e agora custa ${precoAtual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>
+            <p id="p"></p>
 
-        <p>Hoje o produto está mais barato.</p>
+            <div id="print">
+                <!-- Div 02 -->
+            </div>
+        </section>
+    </main>
 
-        <p>O preço caiu ${diferenca.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.</p>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
 
-        <p>Uma variação de ${variacaoCaiu.toFixed(2)}% pra baixo.</p>
-        `
-        return
-}
-
-btn.addEventListener('click', function(){
-    verificarPreco()
-})
-
-
-
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
