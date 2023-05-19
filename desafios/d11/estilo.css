@@ -48,12 +48,12 @@ div#print{
     font-style: italic;
 }
 
-div#print > mark#verde{
+ mark#verde{
     background-color: #A6EB9A;
     color: #377D21;
     font-weight: bold;
 }
-div#print > mark#vermelho{
+ mark#vermelho{
     background-color: #E4908D;
     color: #80190D;
     font-weight: bold;
