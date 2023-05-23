@@ -17,8 +17,8 @@ function reajusteSalarial() {
     let regexLetra = new RegExp('[^a-zA-Z \u00c0-\u00FF]', 'gi')
     let regexNumero = new RegExp('^0-9')
 
-    function verificarNome(nomeProduto){
-        return  nomeProduto == "" || regexLetra.test(nomeProduto)
+    function verificarNome(nome){
+        return  nome == "" || regexLetra.test(nome)
     }
 
     if (verificarNome(nomeFuncionario)){
