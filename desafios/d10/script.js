@@ -94,7 +94,8 @@ function bhaskara(){
     let delta = b * b - 4 * a * c
 
     if(delta < 0){
-        print.innerHTML = `<p>[ERRO] Preencha valor de ( c ) corretamente!</p>`
+        print.innerHTML = `<p>Sem raízes reais!</p>`
+        console.log(`Sem raízes reais!`)
         return
     }
 
